@@ -577,73 +577,73 @@ export const Design23 = () => (
             <span className="sm:hidden">DS</span>
           </div>
           <div className="hidden md:flex gap-6 text-sm font-medium text-gray-600">
-            <a href="#" className="hover:text-black transition-colors">Services</a>
-            <a href="#" className="hover:text-black transition-colors">Portfolio</a>
-            <a href="#" className="hover:text-black transition-colors">About</a>
+            <a href="#" className="hover:text-black transition-colors">Услуги</a>
+            <a href="#" className="hover:text-black transition-colors">Портфолио</a>
+            <a href="#" className="hover:text-black transition-colors">О нас</a>
           </div>
         </div>
         <div className="text-sm font-medium bg-[#0f6cbd] text-white px-4 py-2 rounded-lg shadow-sm hover:bg-[#115ea3] transition-colors cursor-pointer">
-          Contact Us
+          Связаться с нами
         </div>
       </nav>
 
       <div className="max-w-7xl w-full mx-auto relative z-10 px-4 sm:px-8 py-16 md:py-24 flex-1">
-      {/* Hero Section */}
-      <div className="mb-16 md:mb-24">
-        <p className="text-lg md:text-xl text-gray-600 mb-2 font-medium">Digital Agency</p>
-        <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-semibold mb-8 md:mb-12 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">
-          We Build<br/>The Future.
-        </h1>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-4xl">
-          <div className="group cursor-pointer bg-white/60 backdrop-blur-xl p-6 md:p-8 rounded-2xl border border-white/50 shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-all">
-            <h2 className="text-xl md:text-2xl font-semibold mb-2 flex items-center justify-between">
-              Web Design <ArrowRight className="text-[#0f6cbd] opacity-100 md:opacity-0 md:group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
-            </h2>
-            <p className="text-gray-600 text-sm md:text-base">Stunning, pixel-perfect interfaces designed to captivate and convert.</p>
-          </div>
-          <div className="group cursor-pointer bg-white/60 backdrop-blur-xl p-6 md:p-8 rounded-2xl border border-white/50 shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-all">
-            <h2 className="text-xl md:text-2xl font-semibold mb-2 flex items-center justify-between">
-              Development <ArrowRight className="text-[#0f6cbd] opacity-100 md:opacity-0 md:group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
-            </h2>
-            <p className="text-gray-600 text-sm md:text-base">Fast, scalable, and secure modern web applications.</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Services Section */}
-      <div className="mb-16 md:mb-24">
-        <h3 className="text-2xl md:text-3xl font-semibold mb-6 md:mb-8">Our Expertise</h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-          {['E-Commerce', 'Corporate Sites', 'Web Apps', 'SEO Optimization'].map((service) => (
-            <div key={service} className="bg-white/50 backdrop-blur-md p-4 md:p-6 rounded-xl border border-gray-200/50 hover:bg-white transition-colors cursor-pointer text-center font-semibold text-gray-700 hover:text-[#0f6cbd] text-sm md:text-base">
-              {service}
+        {/* Hero Section */}
+        <div className="mb-16 md:mb-24">
+          <p className="text-lg md:text-xl text-gray-600 mb-2 font-medium">Диджитал Агентство</p>
+          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-semibold mb-8 md:mb-12 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">
+            Мы Создаем<br/>Будущее.
+          </h1>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-4xl">
+            <div className="group cursor-pointer bg-white/60 backdrop-blur-xl p-6 md:p-8 rounded-2xl border border-white/50 shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-all">
+              <h2 className="text-xl md:text-2xl font-semibold mb-2 flex items-center justify-between">
+                Веб-дизайн <ArrowRight className="text-[#0f6cbd] opacity-100 md:opacity-0 md:group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+              </h2>
+              <p className="text-gray-600 text-sm md:text-base">Потрясающие, доведенные до идеала интерфейсы, созданные для вовлечения и конверсии.</p>
             </div>
-          ))}
+            <div className="group cursor-pointer bg-white/60 backdrop-blur-xl p-6 md:p-8 rounded-2xl border border-white/50 shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-all">
+              <h2 className="text-xl md:text-2xl font-semibold mb-2 flex items-center justify-between">
+                Разработка <ArrowRight className="text-[#0f6cbd] opacity-100 md:opacity-0 md:group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+              </h2>
+              <p className="text-gray-600 text-sm md:text-base">Быстрые, масштабируемые и безопасные современные веб-приложения.</p>
+            </div>
+          </div>
         </div>
-      </div>
 
-      {/* Case Studies Section */}
-      <div>
-        <h3 className="text-2xl md:text-3xl font-semibold mb-6 md:mb-8">Recent Projects</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-          {[
-            { title: "Fintech Platform", desc: "A modern banking dashboard for a crypto startup." },
-            { title: "Fashion Store", desc: "High-conversion e-commerce with a brutalist edge." },
-            { title: "Healthcare App", desc: "Accessible and secure portal for online clinics." }
-          ].map((project, i) => (
-            <div key={i} className="bg-white p-5 md:p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
-              <div className="w-full h-32 md:h-40 bg-gray-100 rounded-lg mb-4 flex items-center justify-center text-gray-400 overflow-hidden relative">
-                <Box size={32} className="relative z-10" />
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-100/50 to-purple-100/50"></div>
+        {/* Services Section */}
+        <div className="mb-16 md:mb-24">
+          <h3 className="text-2xl md:text-3xl font-semibold mb-6 md:mb-8">Наша Экспертиза</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+            {['E-Commerce', 'Корпоративные Сайты', 'Веб-приложения', 'SEO Оптимизация'].map((service) => (
+              <div key={service} className="bg-white/50 backdrop-blur-md p-4 md:p-6 rounded-xl border border-gray-200/50 hover:bg-white transition-colors cursor-pointer text-center font-semibold text-gray-700 hover:text-[#0f6cbd] text-sm md:text-base">
+                {service}
               </div>
-              <h4 className="font-semibold text-lg mb-1 md:mb-2">{project.title}</h4>
-              <p className="text-gray-600 text-sm">{project.desc}</p>
-            </div>
-          ))}
+            ))}
+          </div>
+        </div>
+
+        {/* Case Studies Section */}
+        <div>
+          <h3 className="text-2xl md:text-3xl font-semibold mb-6 md:mb-8">Последние Проекты</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+            {[
+              { title: "Финтех Платформа", desc: "Современный банковский дашборд для криптостартапа." },
+              { title: "Магазин Одежды", desc: "Высококонверсионный интернет-магазин с уникальным дизайном." },
+              { title: "Медицинский Портал", desc: "Доступная и безопасная система для онлайн-клиник." }
+            ].map((project, i) => (
+              <div key={i} className="bg-white p-5 md:p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                <div className="w-full h-32 md:h-40 bg-gray-100 rounded-lg mb-4 flex items-center justify-center text-gray-400 overflow-hidden relative">
+                  <Box size={32} className="relative z-10" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-100/50 to-purple-100/50"></div>
+                </div>
+                <h4 className="font-semibold text-lg mb-1 md:mb-2">{project.title}</h4>
+                <p className="text-gray-600 text-sm">{project.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
     </div>
   </BaseLayout>
 );
