@@ -558,3 +558,89 @@ export const Design22 = () => (
     </div>
   </BaseLayout>
 );
+
+export const Design23 = () => (
+  <BaseLayout className="bg-[#faf9f8] text-[#242424] overflow-hidden relative font-sans w-full p-0">
+    {/* Background meshes / blurs typical for Fluent 2 */}
+    <div className="absolute top-0 right-0 w-full h-full overflow-hidden pointer-events-none">
+      <div className="absolute top-[-10%] right-[-5%] w-[800px] h-[800px] bg-gradient-to-br from-[#0f6cbd]/20 to-[#c239b3]/20 rounded-full blur-[120px]"></div>
+      <div className="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] bg-gradient-to-tr from-[#115ea3]/15 to-transparent rounded-full blur-[100px]"></div>
+    </div>
+    
+    {/* Navigation */}
+    <nav className="w-full h-16 bg-white/70 backdrop-blur-md border-b border-gray-200 flex items-center justify-between px-8 relative z-50">
+      <div className="flex items-center gap-6">
+        <div className="font-semibold text-lg flex items-center gap-2">
+          <Monitor className="text-[#0f6cbd]" size={20} />
+          Fluent 2 Design System
+        </div>
+        <div className="hidden md:flex gap-6 text-sm font-medium text-gray-600">
+          <a href="#" className="hover:text-black">Design</a>
+          <a href="#" className="hover:text-black">Develop</a>
+          <a href="#" className="hover:text-black">Components</a>
+          <a href="#" className="hover:text-black">Resources</a>
+        </div>
+      </div>
+      <div className="text-sm font-medium text-gray-600 hover:text-black cursor-pointer">
+        Sign in
+      </div>
+    </nav>
+
+    <div className="max-w-7xl w-full mx-auto relative z-10 px-8 py-24">
+      {/* Hero Section */}
+      <div className="mb-24">
+        <p className="text-xl text-gray-600 mb-2 font-medium">Welcome to</p>
+        <h1 className="text-7xl md:text-9xl font-semibold mb-12 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">
+          Fluent 2.
+        </h1>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+          <div className="group cursor-pointer bg-white/60 backdrop-blur-xl p-8 rounded-2xl border border-white/50 shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-all">
+            <h2 className="text-2xl font-semibold mb-2 flex items-center justify-between">
+              Design <ArrowRight className="text-[#0f6cbd] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+            </h2>
+            <p className="text-gray-600">Dive into our Figma UI kits and start creating.</p>
+          </div>
+          <div className="group cursor-pointer bg-white/60 backdrop-blur-xl p-8 rounded-2xl border border-white/50 shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-all">
+            <h2 className="text-2xl font-semibold mb-2 flex items-center justify-between">
+              Develop <ArrowRight className="text-[#0f6cbd] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+            </h2>
+            <p className="text-gray-600">Find installation guides and tooling tips.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Components Section */}
+      <div className="mb-24">
+        <h3 className="text-3xl font-semibold mb-8">Components</h3>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {['Web', 'iOS', 'Android', 'Windows'].map((platform) => (
+            <div key={platform} className="bg-white/50 backdrop-blur-md p-6 rounded-xl border border-gray-200/50 hover:bg-white transition-colors cursor-pointer text-center font-semibold text-gray-700 hover:text-[#0f6cbd]">
+              {platform}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Newsworthy Section */}
+      <div>
+        <h3 className="text-3xl font-semibold mb-8">Newsworthy</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            { title: "A new era of Teams", desc: "Teams leverages Fluent 2 to boost performance." },
+            { title: "Emoji update", desc: "Whatever the moment calls for, there's an emoji for that." },
+            { title: "A modern Outlook", desc: "Outlook, Windows, and Fluent unite." }
+          ].map((news, i) => (
+            <div key={i} className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+              <div className="w-full h-32 bg-gray-100 rounded-lg mb-4 flex items-center justify-center text-gray-400">
+                <Box size={32} />
+              </div>
+              <h4 className="font-semibold text-lg mb-2">{news.title}</h4>
+              <p className="text-gray-600 text-sm">{news.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </BaseLayout>
+);

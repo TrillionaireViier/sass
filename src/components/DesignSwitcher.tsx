@@ -24,8 +24,8 @@ export function DesignSwitcher() {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 
-  const totalDesigns = 22;
-  const availableDesigns = Array.from({ length: 22 }, (_, i) => i + 1);
+  const totalDesigns = 23;
+  const availableDesigns = Array.from({ length: 23 }, (_, i) => i + 1);
 
   return (
     <div className="fixed bottom-6 right-6 z-50">

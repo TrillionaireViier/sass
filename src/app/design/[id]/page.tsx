@@ -29,6 +29,7 @@ const themes: Record<number, ThemeConfig> = {
   20: { bg: "bg-teal-500", text: "text-white", accent: "text-teal-200", cardBg: "bg-white/10", borderColor: "border-white/20" },
   21: { bg: "bg-[#faf9f8]", text: "text-[#242424]", accent: "text-[#0f6cbd]", cardBg: "bg-white", borderColor: "border-gray-200" },
   22: { bg: "bg-[#faf9f8] dark:bg-[#11100f]", text: "text-[#242424] dark:text-white", accent: "text-[#0f6cbd]", cardBg: "bg-white/70 dark:bg-[#292929]/70", borderColor: "border-black/5 dark:border-white/5" },
+  23: { bg: "bg-[#faf9f8]", text: "text-[#242424]", accent: "text-[#0f6cbd]", cardBg: "bg-white", borderColor: "border-gray-200" },
 };
 
 export default function DesignPage({ params }: { params: Promise<{ id: string }> }) {
@@ -36,7 +37,7 @@ export default function DesignPage({ params }: { params: Promise<{ id: string }>
   const unwrappedParams = use(params);
   const id = parseInt(unwrappedParams.id, 10);
 
-  if (isNaN(id) || id < 1 || id > 22) {
+  if (isNaN(id) || id < 1 || id > 23) {
     return <div className="p-10 text-center">Design not found</div>;
   }
 

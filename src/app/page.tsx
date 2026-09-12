@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 
 export default function Home() {
-  const totalDesigns = 22;
+  const totalDesigns = 23;
   const designs = Array.from({ length: totalDesigns }, (_, i) => i + 1);
 
   return (
@@ -33,7 +33,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             className="text-xl text-slate-400 max-w-2xl mx-auto"
           >
-            Explore 22 unique, fully-functional design systems. Each design now includes 8 complete sections.
+            Explore 23 unique, fully-functional design systems. Each design now includes 8 complete sections.
           </motion.p>
         </header>
 
