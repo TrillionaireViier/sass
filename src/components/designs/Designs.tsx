@@ -560,33 +560,34 @@ export const Design22 = () => (
 );
 
 export const Design23 = () => (
-  <BaseLayout className="bg-[#faf9f8] text-[#242424] overflow-hidden relative font-sans w-full p-0">
-    {/* Background meshes */}
-    <div className="absolute top-0 right-0 w-full h-full overflow-hidden pointer-events-none z-0">
-      <div className="absolute top-[-10%] right-[-20%] w-[150vw] md:w-[800px] h-[150vw] md:h-[800px] bg-gradient-to-br from-[#0f6cbd]/20 to-[#c239b3]/20 rounded-full blur-[80px] md:blur-[120px]"></div>
-      <div className="absolute bottom-[-10%] left-[-20%] w-[120vw] md:w-[600px] h-[120vw] md:h-[600px] bg-gradient-to-tr from-[#115ea3]/15 to-transparent rounded-full blur-[80px] md:blur-[100px]"></div>
-    </div>
-    
-    {/* Navigation */}
-    <nav className="w-full h-16 bg-white/70 backdrop-blur-md border-b border-gray-200 flex items-center justify-between px-4 md:px-8 relative z-50">
-      <div className="flex items-center gap-6">
-        <div className="font-semibold text-lg flex items-center gap-2">
-          <Monitor className="text-[#0f6cbd]" size={20} />
-          <span className="hidden sm:inline">Daniel Studio</span>
-          <span className="sm:hidden">DS</span>
-        </div>
-        <div className="hidden md:flex gap-6 text-sm font-medium text-gray-600">
-          <a href="#" className="hover:text-black transition-colors">Services</a>
-          <a href="#" className="hover:text-black transition-colors">Portfolio</a>
-          <a href="#" className="hover:text-black transition-colors">About</a>
-        </div>
+  <BaseLayout className="bg-[#faf9f8] text-[#242424] overflow-hidden relative font-sans w-full p-0 block">
+    <div className="w-full min-h-screen flex flex-col relative z-10">
+      {/* Background meshes */}
+      <div className="absolute top-0 right-0 w-full h-full overflow-hidden pointer-events-none z-0">
+        <div className="absolute top-[-10%] right-[-20%] w-[150vw] md:w-[800px] h-[150vw] md:h-[800px] bg-gradient-to-br from-[#0f6cbd]/20 to-[#c239b3]/20 rounded-full blur-[80px] md:blur-[120px]"></div>
+        <div className="absolute bottom-[-10%] left-[-20%] w-[120vw] md:w-[600px] h-[120vw] md:h-[600px] bg-gradient-to-tr from-[#115ea3]/15 to-transparent rounded-full blur-[80px] md:blur-[100px]"></div>
       </div>
-      <div className="text-sm font-medium bg-[#0f6cbd] text-white px-4 py-2 rounded-lg shadow-sm hover:bg-[#115ea3] transition-colors cursor-pointer">
-        Contact Us
-      </div>
-    </nav>
+      
+      {/* Navigation */}
+      <nav className="w-full h-16 bg-white/70 backdrop-blur-md border-b border-gray-200 flex items-center justify-between px-4 md:px-8 relative z-50 shrink-0">
+        <div className="flex items-center gap-6">
+          <div className="font-semibold text-lg flex items-center gap-2">
+            <Monitor className="text-[#0f6cbd]" size={20} />
+            <span className="hidden sm:inline">Daniel Studio</span>
+            <span className="sm:hidden">DS</span>
+          </div>
+          <div className="hidden md:flex gap-6 text-sm font-medium text-gray-600">
+            <a href="#" className="hover:text-black transition-colors">Services</a>
+            <a href="#" className="hover:text-black transition-colors">Portfolio</a>
+            <a href="#" className="hover:text-black transition-colors">About</a>
+          </div>
+        </div>
+        <div className="text-sm font-medium bg-[#0f6cbd] text-white px-4 py-2 rounded-lg shadow-sm hover:bg-[#115ea3] transition-colors cursor-pointer">
+          Contact Us
+        </div>
+      </nav>
 
-    <div className="max-w-7xl w-full mx-auto relative z-10 px-4 sm:px-8 py-16 md:py-24">
+      <div className="max-w-7xl w-full mx-auto relative z-10 px-4 sm:px-8 py-16 md:py-24 flex-1">
       {/* Hero Section */}
       <div className="mb-16 md:mb-24">
         <p className="text-lg md:text-xl text-gray-600 mb-2 font-medium">Digital Agency</p>
@@ -642,6 +643,7 @@ export const Design23 = () => (
           ))}
         </div>
       </div>
+    </div>
     </div>
   </BaseLayout>
 );
