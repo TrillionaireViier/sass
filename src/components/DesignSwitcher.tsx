@@ -34,7 +34,7 @@ export function DesignSwitcher() {
             initial={{ opacity: 0, y: 20, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
-            className="mb-4 bg-white/10 backdrop-blur-xl border border-white/20 p-4 rounded-2xl shadow-2xl flex flex-col gap-2 min-w-[240px]"
+            className="mb-4 bg-zinc-900/90 backdrop-blur-xl border border-zinc-800 p-4 rounded-2xl shadow-2xl flex flex-col gap-2 min-w-[240px]"
           >
             <h3 className="text-sm font-semibold text-white mb-2">Select Design</h3>
             <div className="grid grid-cols-4 gap-2 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
@@ -58,10 +58,10 @@ export function DesignSwitcher() {
                       w-10 h-10 rounded-xl flex items-center justify-center transition-all
                       ${
                         activeDesign === id
-                          ? "bg-blue-500 text-white ring-2 ring-blue-300 ring-offset-2 ring-offset-transparent shadow-lg shadow-blue-500/30"
+                          ? "bg-blue-500 text-white ring-2 ring-blue-300 ring-offset-2 ring-offset-zinc-900 shadow-lg shadow-blue-500/30"
                           : isAvailable
-                          ? "bg-white/10 text-white/80 hover:bg-white/20 hover:text-white"
-                          : "bg-black/20 text-white/30 cursor-not-allowed"
+                          ? "bg-zinc-800/50 text-zinc-300 hover:bg-zinc-700 hover:text-white"
+                          : "bg-black/40 text-zinc-600 cursor-not-allowed"
                       }
                     `}
                   >
