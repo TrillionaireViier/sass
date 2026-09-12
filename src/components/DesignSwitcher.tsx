@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const DESIGN_ICONS = [
   Layout, Layers, Grid, Box, Square, Circle, 
@@ -20,7 +21,7 @@ const DESIGN_ICONS = [
 ];
 
 export function DesignSwitcher() {
-  const { activeDesign, setActiveDesign } = useDesign();
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 
   const totalDesigns = 22;
@@ -48,7 +49,7 @@ export function DesignSwitcher() {
                     key={id}
                     onClick={() => {
                       if (isAvailable) {
-                        setActiveDesign(id);
+                        router.push(`/design/${id}`);
                         setIsOpen(false);
                       }
                     }}
@@ -57,15 +58,13 @@ export function DesignSwitcher() {
                     className={`
                       w-10 h-10 rounded-xl flex items-center justify-center transition-all
                       ${
-                        activeDesign === id
-                          ? "bg-blue-500 text-white ring-2 ring-blue-300 ring-offset-2 ring-offset-zinc-900 shadow-lg shadow-blue-500/30"
-                          : isAvailable
+                        isAvailable
                           ? "bg-zinc-800/50 text-zinc-300 hover:bg-zinc-700 hover:text-white"
                           : "bg-black/40 text-zinc-600 cursor-not-allowed"
                       }
                     `}
                   >
-                    <IconComponent size={20} strokeWidth={activeDesign === id ? 2.5 : 2} />
+                    <IconComponent size={20} strokeWidth={2} />
                   </button>
                 );
               })}

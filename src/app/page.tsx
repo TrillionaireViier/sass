@@ -1,69 +1,60 @@
 "use client";
 
 import React from "react";
-import { useDesign } from "@/context/DesignContext";
-import { AnimatePresence } from "framer-motion";
-import * as Designs from "@/components/designs/Designs";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { Sparkles } from "lucide-react";
 
 export default function Home() {
-  const { activeDesign } = useDesign();
-
-  const renderDesign = () => {
-    switch (activeDesign) {
-      case 1:
-        return <Designs.Design1 key="d1" />;
-      case 2:
-        return <Designs.Design2 key="d2" />;
-      case 3:
-        return <Designs.Design3 key="d3" />;
-      case 4:
-        return <Designs.Design4 key="d4" />;
-      case 5:
-        return <Designs.Design5 key="d5" />;
-      case 6:
-        return <Designs.Design6 key="d6" />;
-      case 7:
-        return <Designs.Design7 key="d7" />;
-      case 8:
-        return <Designs.Design8 key="d8" />;
-      case 9:
-        return <Designs.Design9 key="d9" />;
-      case 10:
-        return <Designs.Design10 key="d10" />;
-      case 11:
-        return <Designs.Design11 key="d11" />;
-      case 12:
-        return <Designs.Design12 key="d12" />;
-      case 13:
-        return <Designs.Design13 key="d13" />;
-      case 14:
-        return <Designs.Design14 key="d14" />;
-      case 15:
-        return <Designs.Design15 key="d15" />;
-      case 16:
-        return <Designs.Design16 key="d16" />;
-      case 17:
-        return <Designs.Design17 key="d17" />;
-      case 18:
-        return <Designs.Design18 key="d18" />;
-      case 19:
-        return <Designs.Design19 key="d19" />;
-      case 20:
-        return <Designs.Design20 key="d20" />;
-      case 21:
-        return <Designs.Design21 key="d21" />;
-      case 22:
-        return <Designs.Design22 key="d22" />;
-      default:
-        return <Designs.Design1 key="default" />;
-    }
-  };
+  const totalDesigns = 22;
+  const designs = Array.from({ length: totalDesigns }, (_, i) => i + 1);
 
   return (
-    <main className="flex-1 overflow-x-hidden">
-      <AnimatePresence mode="wait">
-        {renderDesign()}
-      </AnimatePresence>
+    <main className="min-h-screen bg-slate-950 text-white p-8 md:p-16">
+      <div className="max-w-7xl mx-auto">
+        <header className="mb-16 text-center">
+          <motion.div 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-6"
+          >
+            <Sparkles className="w-4 h-4 text-blue-400" />
+            <span className="text-sm font-medium tracking-wide uppercase">Design Gallery</span>
+          </motion.div>
+          <motion.h1 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-5xl md:text-7xl font-bold mb-6"
+          >
+            Web Studio <span className="text-blue-500">Daniel</span>
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-xl text-slate-400 max-w-2xl mx-auto"
+          >
+            Explore 22 unique, fully-functional design systems. Each design now includes 8 complete sections.
+          </motion.p>
+        </header>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        >
+          {designs.map((id) => (
+            <Link key={id} href={`/design/${id}`}>
+              <div className="group relative aspect-video bg-white/5 rounded-2xl border border-white/10 overflow-hidden hover:border-blue-500/50 transition-colors flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <h2 className="text-2xl font-bold z-10 group-hover:scale-110 transition-transform">
+                  Design {id}
+                </h2>
+              </div>
+            </Link>
+          ))}
+        </motion.div>
+      </div>
     </main>
   );
 }
