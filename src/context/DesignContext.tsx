@@ -10,7 +10,7 @@ type DesignContextType = {
 const DesignContext = createContext<DesignContextType | undefined>(undefined);
 
 export function DesignProvider({ children }: { children: ReactNode }) {
-  const [activeDesign, setActiveDesign] = useState<number>(1);
+  const [activeDesign, setActiveDesign] = useState<number>(22);
 
   return (
     <DesignContext.Provider value={{ activeDesign, setActiveDesign }}>

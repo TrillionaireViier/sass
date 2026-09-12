@@ -14,12 +14,76 @@ const BaseLayout = ({ children, className }: { children: React.ReactNode, classN
 );
 
 export const Design1 = () => (
-  <BaseLayout className="bg-gray-100 text-gray-800">
-    <div className="max-w-4xl mx-auto p-12 rounded-[3rem] bg-gray-100 shadow-[20px_20px_60px_#bebebe,-20px_-20px_60px_#ffffff] text-center">
-      <Sparkles className="w-16 h-16 mx-auto mb-6 text-gray-400" />
-      <h1 className="text-6xl font-extrabold mb-6 tracking-tight text-gray-700">Neumorphic Feel</h1>
-      <p className="text-xl text-gray-500 mb-10">Soft, extruded UI for a calm experience.</p>
-      <button className="px-8 py-4 rounded-full bg-gray-100 shadow-[10px_10px_30px_#bebebe,-10px_-10px_30px_#ffffff] font-bold text-gray-600 hover:shadow-[inset_10px_10px_30px_#bebebe,inset_-10px_-10px_30px_#ffffff] transition-all">Explore Now</button>
+  <BaseLayout className="bg-slate-950 text-slate-200 overflow-hidden relative">
+    {/* Background Glows */}
+    <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-blue-600/30 rounded-full blur-[120px] pointer-events-none"></div>
+    <div className="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] bg-purple-600/30 rounded-full blur-[120px] pointer-events-none"></div>
+    
+    <div className="max-w-6xl w-full mx-auto relative z-10 flex flex-col items-center justify-center text-center py-20">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8"
+      >
+        <Sparkles className="w-4 h-4 text-blue-400" />
+        <span className="text-sm font-medium text-blue-200 tracking-wide uppercase">Web Studio Daniel</span>
+      </motion.div>
+
+      <motion.h1 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.1 }}
+        className="text-7xl md:text-8xl font-black mb-8 tracking-tighter bg-clip-text text-transparent bg-gradient-to-br from-white via-slate-200 to-slate-500"
+      >
+        Crafting Digital<br />Masterpieces.
+      </motion.h1>
+
+      <motion.p 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="text-xl md:text-2xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed"
+      >
+        We build fast, beautiful, and scalable web applications that elevate your brand and drive results.
+      </motion.p>
+
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full sm:w-auto"
+      >
+        <button className="px-8 py-4 w-full sm:w-auto rounded-full bg-blue-600 hover:bg-blue-500 text-white font-semibold transition-all shadow-[0_0_40px_-10px_rgba(37,99,235,0.5)] flex items-center justify-center gap-2 group">
+          Start a Project
+          <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+        </button>
+        <button className="px-8 py-4 w-full sm:w-auto rounded-full bg-white/5 hover:bg-white/10 text-white font-semibold border border-white/10 transition-all backdrop-blur-md">
+          View Portfolio
+        </button>
+      </motion.div>
+
+      {/* Feature Grid */}
+      <motion.div 
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-24 w-full text-left"
+      >
+        {[
+          { icon: <Monitor className="w-6 h-6 text-blue-400" />, title: "Modern Design", desc: "Pixel-perfect interfaces that captivate users." },
+          { icon: <Zap className="w-6 h-6 text-yellow-400" />, title: "Lightning Fast", desc: "Optimized for speed and performance." },
+          { icon: <Code className="w-6 h-6 text-purple-400" />, title: "Clean Code", desc: "Scalable and maintainable architecture." }
+        ].map((feature, i) => (
+          <div key={i} className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
+            <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-6">
+              {feature.icon}
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
+            <p className="text-slate-400 leading-relaxed">{feature.desc}</p>
+          </div>
+        ))}
+      </motion.div>
     </div>
   </BaseLayout>
 );
@@ -388,6 +452,109 @@ export const Design21 = () => (
           </div>
         </main>
       </div>
+    </div>
+  </BaseLayout>
+);
+
+export const Design22 = () => (
+  <BaseLayout className="bg-[#faf9f8] dark:bg-[#11100f] text-[#242424] dark:text-[#ffffff] overflow-hidden relative font-sans transition-colors duration-300">
+    {/* Fluent 2 Mica-like Background Elements */}
+    <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+      <div className="absolute top-[-20%] left-[-10%] w-[800px] h-[800px] bg-[#0f6cbd]/10 dark:bg-[#0f6cbd]/20 rounded-full blur-[100px]"></div>
+      <div className="absolute bottom-[-20%] right-[-10%] w-[800px] h-[800px] bg-[#2886de]/10 dark:bg-[#2886de]/15 rounded-full blur-[120px]"></div>
+    </div>
+    
+    <div className="max-w-7xl w-full mx-auto relative z-10 flex flex-col items-center justify-center py-20 px-4 md:px-8">
+      
+      {/* Header/Badge */}
+      <motion.div 
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="inline-flex items-center gap-2 px-3 py-1.5 rounded-[4px] bg-white/60 dark:bg-black/40 border border-black/5 dark:border-white/10 backdrop-blur-xl mb-12 shadow-sm"
+      >
+        <Sparkles className="w-4 h-4 text-[#0f6cbd] dark:text-[#479ef5]" />
+        <span className="text-[12px] font-semibold text-[#242424] dark:text-[#ffffff] tracking-wide uppercase">Web Studio Daniel</span>
+      </motion.div>
+
+      {/* Hero Copy */}
+      <div className="text-center max-w-4xl mx-auto mb-16">
+        <motion.h1 
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+          className="text-6xl md:text-8xl font-semibold mb-6 tracking-tight text-[#242424] dark:text-[#ffffff]"
+        >
+          Crafting Digital<br />Masterpieces.
+        </motion.h1>
+
+        <motion.p 
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+          className="text-xl md:text-2xl text-[#616161] dark:text-[#d2d0ce] max-w-2xl mx-auto leading-relaxed font-normal"
+        >
+          We build fast, beautiful, and scalable web applications that elevate your brand and drive results.
+        </motion.p>
+      </div>
+
+      {/* Buttons */}
+      <motion.div 
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+        className="flex flex-col sm:flex-row gap-3 justify-center items-center w-full sm:w-auto mb-24"
+      >
+        <button className="px-6 py-2.5 w-full sm:w-auto rounded-[4px] bg-[#0f6cbd] hover:bg-[#115ea3] active:bg-[#0f548c] text-white font-semibold transition-colors shadow-sm flex items-center justify-center gap-2 group">
+          Start a Project
+          <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+        </button>
+        <button className="px-6 py-2.5 w-full sm:w-auto rounded-[4px] bg-white/60 hover:bg-white/80 dark:bg-[#ffffff]/10 dark:hover:bg-[#ffffff]/15 text-[#242424] dark:text-white font-semibold border border-black/5 dark:border-white/10 transition-colors backdrop-blur-xl shadow-sm">
+          View Portfolio
+        </button>
+      </motion.div>
+
+      {/* Features Grid */}
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+        className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full text-left"
+      >
+        {/* Feature 1 */}
+        <div className="p-6 rounded-[8px] bg-white/70 dark:bg-[#292929]/70 border border-black/5 dark:border-white/5 backdrop-blur-xl shadow-sm hover:shadow-md transition-shadow">
+          <div className="w-10 h-10 rounded-[4px] bg-[#0f6cbd]/10 dark:bg-[#0f6cbd]/20 flex items-center justify-center mb-5">
+            <Monitor className="w-5 h-5 text-[#0f6cbd] dark:text-[#479ef5]" />
+          </div>
+          <h3 className="text-[20px] font-semibold text-[#242424] dark:text-white mb-2 leading-tight">Modern Design</h3>
+          <p className="text-[#616161] dark:text-[#d2d0ce] text-[14px] leading-relaxed font-normal">
+            Pixel-perfect interfaces that captivate users.
+          </p>
+        </div>
+
+        {/* Feature 2 */}
+        <div className="p-6 rounded-[8px] bg-white/70 dark:bg-[#292929]/70 border border-black/5 dark:border-white/5 backdrop-blur-xl shadow-sm hover:shadow-md transition-shadow">
+          <div className="w-10 h-10 rounded-[4px] bg-[#0f6cbd]/10 dark:bg-[#0f6cbd]/20 flex items-center justify-center mb-5">
+            <Zap className="w-5 h-5 text-[#0f6cbd] dark:text-[#479ef5]" />
+          </div>
+          <h3 className="text-[20px] font-semibold text-[#242424] dark:text-white mb-2 leading-tight">Lightning Fast</h3>
+          <p className="text-[#616161] dark:text-[#d2d0ce] text-[14px] leading-relaxed font-normal">
+            Optimized for speed and performance.
+          </p>
+        </div>
+
+        {/* Feature 3 */}
+        <div className="p-6 rounded-[8px] bg-white/70 dark:bg-[#292929]/70 border border-black/5 dark:border-white/5 backdrop-blur-xl shadow-sm hover:shadow-md transition-shadow">
+          <div className="w-10 h-10 rounded-[4px] bg-[#0f6cbd]/10 dark:bg-[#0f6cbd]/20 flex items-center justify-center mb-5">
+            <Code className="w-5 h-5 text-[#0f6cbd] dark:text-[#479ef5]" />
+          </div>
+          <h3 className="text-[20px] font-semibold text-[#242424] dark:text-white mb-2 leading-tight">Clean Code</h3>
+          <p className="text-[#616161] dark:text-[#d2d0ce] text-[14px] leading-relaxed font-normal">
+            Scalable and maintainable architecture.
+          </p>
+        </div>
+      </motion.div>
+
     </div>
   </BaseLayout>
 );
